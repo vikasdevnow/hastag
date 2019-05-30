@@ -1,7 +1,66 @@
-@extends('layouts.app')
+@extends('layouts.home')
 
 @section('content')
-<div class="container">
+   <div class="section section-signup">
+                    <div class="container">
+                        <div class="squares square-1"></div>
+                        <div class="squares square-2"></div>
+                        <div class="squares square-3"></div>
+                        <div class="squares square-4"></div>
+                        <div class="row row-grid justify-content-between align-items-center">
+                            <div class="col-lg-6">
+                                <h3 class="display-3 text-white">#hastag on Tagit
+                                    <span class="text-white">See what people are saying and join the conversation.</span>
+                                </h3>
+                                <!--<p class="text-white mb-3">The Design System comes with four pre-built pages to help you get started faster. You can change the text and images and you're good to go. More importantly, looking at them will give you a picture of what you can built with this powerful Bootstrap 4 Design System.</p>-->
+                                <div class="btn-wrapper">
+                                    <a href="#" class="btn btn-info">Register Page</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-lg-auto">
+                                <div class="card card-register">
+                                    <div class="card-header">
+                                        <img class="card-img" src="{{asset('img/square1.png')}}" alt="Card image">
+                                        <h4 class="card-title">LOGIN</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <form class="form">
+                                           
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                        <i class="tim-icons icon-email-85"></i>
+                                                    </div>
+                                                </div>
+                                                <input type="text" placeholder="Email" class="form-control">
+                                            </div>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                        <i class="tim-icons icon-lock-circle"></i>
+                                                    </div>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="Password">
+                                            </div>
+                                            <div class="form-check text-left">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <span class="form-check-sign"></span>
+                                                    I agree to the
+                                                    <a href="javascript:void(0)">terms and conditions</a>.
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="javascript:void(0)" class="btn btn-info btn-round btn-lg">LOGIN</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!--<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -69,5 +128,5 @@
             </div>
         </div>
     </div>
-</div>
+</div>-->
 @endsection
