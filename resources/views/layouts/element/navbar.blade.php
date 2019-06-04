@@ -44,36 +44,41 @@
                         <p class="d-lg-none d-xl-none">Instagram</p>
                     </a>
                 </li>
-<!--                <li class="dropdown nav-item">
+
+
+                <!--                <li class="nav-item">
+                                    <a class="nav-link btn btn-default d-none d-lg-block" href="{{ route('login') }}" onclick="scrollToDownload()">
+                                        <i class="tim-icons icon-cloud-download-93"></i> Download
+                                    </a>
+                                </li>-->
+                @if (Auth::check())
+                <li class="dropdown nav-item">
                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                        <i class="fa fa-cogs d-lg-none d-xl-none"></i> Getting started
+                        <i class="fa fa-cogs d-lg-none d-xl-none"></i>{{ Auth::user()->name }}
                     </a>
                     <div class="dropdown-menu dropdown-with-icons">
                         <a href="https://demos.creative-tim.com/blk-design-system/docs/1.0/getting-started/overview.html" class="dropdown-item">
-                            <i class="tim-icons icon-paper"></i> Documentation
-                        </a>
-                        <a href="examples/register-page.html" class="dropdown-item">
-                            <i class="tim-icons icon-bullet-list-67"></i>Register Page
-                        </a>
-                        <a href="examples/landing-page.html" class="dropdown-item">
-                            <i class="tim-icons icon-image-02"></i>Landing Page
+                            <i class="tim-icons icon-paper"></i> My Tags
                         </a>
                         <a href="examples/profile-page.html" class="dropdown-item">
                             <i class="tim-icons icon-single-02"></i>Profile Page
                         </a>
+                        <a href="examples/landing-page.html" class="dropdown-item">
+                            <i class="fa fa-cogs"></i>Setting
+                        </a>
+                        <a href="{{ route('logout') }}" class="dropdown-item">
+                            <i class="fas fa-sign-out-alt"></i>Logout
+                        </a>
                     </div>
-                </li>-->
-               
-                <li class="nav-item">
-                    <a class="nav-link btn btn-default d-none d-lg-block" href="{{ route('login') }}" onclick="scrollToDownload()">
-                        <i class="tim-icons icon-cloud-download-93"></i> Download
-                    </a>
                 </li>
-                 <li class="nav-item">
-                    <a class="btn btn-link btn-success d-none d-lg-block" href="{{ route('login') }}" onclick="scrollToDownload()">
+                @else
+                <li class="nav-item">
+                    <a class="btn btn-link btn-success " href="{{ route('login') }}" onclick="scrollToDownload()">
                         <i class="tim-icons icon-single-02"></i> Login
                     </a>
                 </li>
+                @endif
+
             </ul>
         </div>
     </div>
