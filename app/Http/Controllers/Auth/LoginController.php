@@ -25,7 +25,7 @@ use AuthenticatesUsers;
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/hash';
 
     /**
      * Create a new controller instance.

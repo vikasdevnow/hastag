@@ -57,7 +57,7 @@
                         <i class="fa fa-cogs d-lg-none d-xl-none"></i>{{ Auth::user()->name }}
                     </a>
                     <div class="dropdown-menu dropdown-with-icons">
-                        <a href="https://demos.creative-tim.com/blk-design-system/docs/1.0/getting-started/overview.html" class="dropdown-item">
+                        <a href="{{ route('users.hash') }}" class="dropdown-item">
                             <i class="tim-icons icon-paper"></i> My Tags
                         </a>
                         <a href="examples/profile-page.html" class="dropdown-item">

@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 
 Route::get('/hash', 'UserController@hash')->name('users.hash');
+Route::post('/store_hash', 'UserController@store_hash')->name('store_hash');
+Route::post('/searchHash', 'UserController@searchHash')->name('searchHash');
 
 
 
